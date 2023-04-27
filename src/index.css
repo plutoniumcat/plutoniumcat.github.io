@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* CSS reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+margin: 0;
+padding: 0;
+font-weight: normal;
+}
+
+ol, ul {
+list-style: none;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+/* end CSS reset */
+
+body {
+  font-family:"Muli", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Philosopher", sans-serif;
+}
+
+h1 {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Splash */
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul li {
+  color: rgb(128, 235, 255);
+}
+
+nav ul li a {
+  color: rgb(128, 235, 255);
+}
+
+.stage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.stage video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  display: block;
+}
+
+.me {
+  position: absolute;
+  top: 25rem;
+  left: 10rem;
+  text-shadow:0 0 2px white, 0 0 5px rgb(200, 235, 255), 0 0 10px rgb(128, 235, 255);
+}
+
+/* About */
+
+#about p {
+  padding: 0.5rem;
+}
+
+.language {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lang-label {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+}
+
+.toggle input { /* Hide default HTML checkbox */
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid #666;
+  border-radius: 2rem;
+  background-image: url("./media/jpflag.png");
+  background-size: cover;
+  background-position: 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  left: 0rem;
+  top: -0.1rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+  background-image: url("./media/auflag.png");
+  background-size: cover;
+  background-position: 0px;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#profileimage {
+  width: 50%;
+  border-radius: 50%;
+  flex-shrink: 1;
+}
+
+.about-text {
+  flex-grow: 1;
+}
+
+.dl-resume {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: cornflowerblue;
+}
+
+/*Timeline*/
+
+.timeline-container {
+  width: 50%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.timeline-event {
+  width: 100%;
+  border-style: dashed;
+  border-color: cornflowerblue;
+  margin: -2px 0 0 0;
+  padding: 2em;
+}
+
+.timeline-event:nth-of-type(odd) {
+  border-right: none;
+  border-bottom: none;
+  border-radius: 1.5rem 0 0 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.timeline-event:nth-of-type(odd) h3 {
+  margin-left: -4rem;
+}
+
+.timeline-event:nth-of-type(odd) p {
+  width: fit-content;
+  margin-left: -2rem;
+}
+
+.timeline-event:nth-of-type(even) {
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 1.5rem 1.5rem 0;
+  margin-left: 1.5rem;
+}
+
+.timeline-event:nth-of-type(even) h3 {
+  margin-left: auto;
+  margin-right: -4rem;
+}
+
+.timeline-event:nth-of-type(even) p {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: -2rem;
+}
+
+.timeline-event:first-of-type {
+  border-top: none;
+  border-top-left-radius: 0;
+}
+
+.timeline-event:last-of-type {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+}
+
+.timeline-event h3 {
+  width: fit-content;
+  background-color: cornflowerblue;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* Projects */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.project-card {
+  width: 45%;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ccc;
+  border-radius: 1rem;
+}
+
+.project-notes h2 {
+  margin: 0.5rem;
+}
+
+.project-notes p {
+  margin: 0.25rem;
+}
+
+.project-notes a {
+  width: fit-content;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem;
+  background-color: cornflowerblue;
+  color: black;
+}
+
+.desc {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.stack {
+  font-weight: bold;
+}
+
+.project-img {
+  width: 45%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.project-notes {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contact */
+
+form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+form input, textarea {
+  border-radius: 0.25rem;
+  border-style: none;
+  background-color: #e6f4ff;
+}
+
+.submit-btn {
+  width: fit-content;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: cornflowerblue;
+}
+
+/* Social */
+
+footer {
+  padding-top: 2rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer ul li img {
+  width: auto;
+  height: 3rem;
+}
+
+@media screen and (max-width: 640px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-container {
+    width: 80%;
+    margin-left: 1.5rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-img {
+    width: 40%;
+    height: fit-content;
+    border-radius: 0.5rem;
+  }
+
+  .project-notes {
+    width: 60%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
