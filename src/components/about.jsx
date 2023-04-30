@@ -1,4 +1,3 @@
-import LanguageToggle from './LanguageToggle';
 import resume from '../media/amcpherson_resume.pdf';
 import me2023 from '../media/me2023.jpg'
 
@@ -20,7 +19,6 @@ const timeline = [
 function About() {
     return (
         <section id="about">
-            <LanguageToggle />
             <h1 className="aboutme">About Me</h1>
             <div className="profile-container">
                 <img src={me2023} alt="Me" id="profileimage" />

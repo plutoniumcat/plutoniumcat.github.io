@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
-function LanguageToggle() {
-    const [isToggled, setToggled] = useState(false);
-    const [lang, setLang] = useState("EN");
-
-    const toggleLang = () => {
-        setToggled(!isToggled);
-        setLang(isToggled ? "JP" : "EN")
-    }
+function LanguageToggle(props) {
 
     return(
         <div className="language">
-            <div className="lang-label">{isToggled ? "English" : "日本語" }</div>
+            <div className="lang-label">{props.langIsToggled ? "English" : "日本語" }</div>
             <label className="toggle">
-                <input type="checkbox" name="language" id="lang-toggle" checked={isToggled} onChange={toggleLang} />
+                <input type="checkbox" name="language" id="lang-toggle" defaultChecked={props.langIsToggled} 
+                onChange={() => {props.setLang(props.langToggle)}} />
                 <span className="slider"></span>
             </label>
         </div>
