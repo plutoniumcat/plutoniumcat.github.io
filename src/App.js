@@ -1,4 +1,3 @@
-import './App.css';
 import Splash from './components/splash';
 import About from './components/about';
 import Projects from './components/projects';
