@@ -1,12 +1,13 @@
 // import React, { useState, useEffect } from "react";
 import dailyexercise from '../media/projects/dailyexercise.jpg'
+import learninglab from '../media/projects/learninglab.jpg'
 
 const projects = [
     {
         "id": 1,
         "name": "DailyExercise",
         "stack": "Python",
-        "img": "../../public/projects/dailyexercise.jpg",
+        "img": dailyexercise,
         "github": "https://github.com/plutoniumcat/DailyExercise",
         "desc": "Terminal application for tracking exercise routines.",
         "tags": ["python"]
@@ -16,7 +17,7 @@ const projects = [
         "id": 2,
         "name": "LearningLab",
         "stack": "Python, Flask, SQLAlchemy, Marshmallow, PostgreSQL",
-        "img": "./media/projects/learninglab.jpg",
+        "img": learninglab,
         "github": "https://github.com/plutoniumcat/learninglab",
         "desc": "REST API for curating lists of tutorials.",
         "tags": ["python", "flask", "SQL", "API", "web"]
@@ -33,13 +34,16 @@ function Projects() {
     //     .then((data) => setProjects(data));
     // }, []);
 
+    const enlargeCard = (event) => event.currentTarget.style.transform = "scale(1.1)";
+    const resetCard = (event) => event.currentTarget.style.transform = "scale(1)";
+
     return (
         <section id="projects">
             <h1 className="projects-title">Projects</h1>
             <div className="card-container">
                 {projects.map((project) => (
-                    <div className="project-card" key={project.id}>
-                        <img className="project-img" src={dailyexercise} alt={project.name} />
+                    <div className="project-card" key={project.id} onMouseOver={enlargeCard} onMouseOut={resetCard} >
+                        <img className="project-img" src={project.img} alt={project.name} />
                         <div className="project-notes">
                             <h2>{project.name}</h2>
                             <p className="stack">Stack: {project.stack}</p>
@@ -48,7 +52,7 @@ function Projects() {
                             <p>
                                 {project.tags.map(
                                     (tag)=> (
-                                        <span>#{tag} </span>
+                                        <span key={tag}>#{tag} </span>
                                     )
                                 )}
                             </p>
