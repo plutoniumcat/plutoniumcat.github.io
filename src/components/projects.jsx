@@ -25,14 +25,6 @@ const projects = [
 ];
 
 function Projects() {
-    // const [projects, setProjects] = useState([]);
-
-    // useEffect(() => {
-    //   fetch("../data/projectdata.json")
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data))
-    //     .then((data) => setProjects(data));
-    // }, []);
 
     const enlargeCard = (event) => event.currentTarget.style.transform = "scale(1.1)";
     const resetCard = (event) => event.currentTarget.style.transform = "scale(1)";
