@@ -1,4 +1,4 @@
-// import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import dailyexercise from '../media/projects/dailyexercise.jpg';
 import learninglab from '../media/projects/learninglab.jpg';
@@ -25,31 +25,47 @@ const projects = [
     }
 ];
 
-function Projects() {
+function Projects(props) {
+    const [tag, setTag] = useState(null);
+
+    useEffect(() => {
+        if (props.tag){
+            setTag(props.tag);
+        }
+    }, [props.tag]);
 
     const enlargeCard = (event) => event.currentTarget.style.transform = "scale(1.1)";
     const resetCard = (event) => event.currentTarget.style.transform = "scale(1)";
+
+    function hasTag(project) {
+        if ({ tag }.tag) {
+            return project.tags.includes({ tag }.tag)
+        }
+        else {
+            return true
+        }
+    }
 
     function tagLink(tag) {
         return `/projects/tagged/${tag}`
     }
 
-    return (
+    return(
         <section id="projects">
-            <h1 className="projects-title">Projects</h1>
+            {tag ? null: <h1 className="projects-title">Projects</h1>}
             <div className="card-container">
-                {projects.map((project) => (
+                {projects.filter(hasTag).map((project) => (
                     <div className="project-card" key={project.id} onMouseOver={enlargeCard} onMouseOut={resetCard} >
                         <img className="project-img" src={project.img} alt={project.name} />
                         <div className="project-notes">
                             <h2>{project.name}</h2>
                             <p className="stack">Stack: {project.stack}</p>
                             <p className="desc">{project.desc}</p>
-                            <a className='github-link' href={project.github}>View on GitHub</a>
+                            <a className="github-link" href={project.github}>View on GitHub</a>
                             <p>
                                 {project.tags.map(
                                     (tag)=> (
-                                            <span key={ tag }><Link to={tagLink({ tag }.tag)}>#{ tag }</Link> </span>
+                                        <span key={ tag }><Link to={tagLink({ tag }.tag)}>#{ tag }</Link> </span>
                                     )
                                 )}
                             </p>
