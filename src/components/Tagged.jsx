@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const projects = [
     {
@@ -22,30 +22,37 @@ const projects = [
     }
 ];
 
-export function Tagged(props) {
+export function Tagged() {
 
     let { tag } = useParams();
 
     const enlargeCard = (event) => event.currentTarget.style.transform = "scale(1.1)";
     const resetCard = (event) => event.currentTarget.style.transform = "scale(1)";
 
+    function hasTag(project) {
+        return project.tags.includes({ tag }.tag)
+    }
+
+    function tagLink(tag) {
+        return `/projects/tagged/${tag}`
+    }
+
     return(
         <section id="projects">
             <h1 className="projects-title">Projects tagged #{ tag }</h1>
             <div className="card-container">
-                {projects.filter((project) => project.tags.includes({ tag }))
-                .map((project) => (
+                {projects.filter(hasTag).map((project) => (
                     <div className="project-card" key={project.id} onMouseOver={enlargeCard} onMouseOut={resetCard} >
                         <img className="project-img" src={project.img} alt={project.name} />
                         <div className="project-notes">
                             <h2>{project.name}</h2>
                             <p className="stack">Stack: {project.stack}</p>
                             <p className="desc">{project.desc}</p>
-                            <a href={project.github}>View on GitHub</a>
+                            <a className="github-link" href={project.github}>View on GitHub</a>
                             <p>
                                 {project.tags.map(
                                     (tag)=> (
-                                        <span key={tag}>#{tag} </span>
+                                        <span key={ tag }><Link to={tagLink({ tag }.tag)}>#{ tag }</Link> </span>
                                     )
                                 )}
                             </p>
@@ -53,6 +60,7 @@ export function Tagged(props) {
                     </div>
                  ))}
             </div>
+            <div className="homeNav">Return to Homepage</div>
         </section>
     )
 }

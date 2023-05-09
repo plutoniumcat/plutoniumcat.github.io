@@ -1,6 +1,7 @@
 // import React, { useState, useEffect } from "react";
-import dailyexercise from '../media/projects/dailyexercise.jpg'
-import learninglab from '../media/projects/learninglab.jpg'
+import { Link } from 'react-router-dom';
+import dailyexercise from '../media/projects/dailyexercise.jpg';
+import learninglab from '../media/projects/learninglab.jpg';
 
 const projects = [
     {
@@ -29,6 +30,10 @@ function Projects() {
     const enlargeCard = (event) => event.currentTarget.style.transform = "scale(1.1)";
     const resetCard = (event) => event.currentTarget.style.transform = "scale(1)";
 
+    function tagLink(tag) {
+        return `/projects/tagged/${tag}`
+    }
+
     return (
         <section id="projects">
             <h1 className="projects-title">Projects</h1>
@@ -40,11 +45,11 @@ function Projects() {
                             <h2>{project.name}</h2>
                             <p className="stack">Stack: {project.stack}</p>
                             <p className="desc">{project.desc}</p>
-                            <a href={project.github}>View on GitHub</a>
+                            <a className='github-link' href={project.github}>View on GitHub</a>
                             <p>
                                 {project.tags.map(
                                     (tag)=> (
-                                        <span key={tag}>#{tag} </span>
+                                            <span key={ tag }><Link to={tagLink({ tag }.tag)}>#{ tag }</Link> </span>
                                     )
                                 )}
                             </p>
