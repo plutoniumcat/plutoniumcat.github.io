@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import Projects from './projects';
-import NavigateHomeButton from './NavigateHomeButton';
+import Projects from '../projects';
+import NavigateHomeButton from '../NavigateHomeButton';
 
 export function Tagged() {
 

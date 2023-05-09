@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Projects from './components/projects';
-import { Tagged } from './components/Tagged';
+import { Tagged } from './components/pages/Tagged';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
