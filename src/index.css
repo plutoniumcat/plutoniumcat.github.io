@@ -53,6 +53,10 @@ section {
   padding: 1rem;
 }
 
+.navigate-home {
+  cursor: pointer;
+}
+
 /* Splash */
 
 nav ul {
@@ -184,7 +188,7 @@ input:checked + .slider:before {
   flex-grow: 1;
 }
 
-.dl-resume {
+.dl-resume, .navigate-home {
   margin-top: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
