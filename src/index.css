@@ -179,13 +179,13 @@ input:checked + .slider:before {
 }
 
 #profileimage {
-  width: 50%;
+  width: 15rem;
+  height: auto;
   border-radius: 50%;
-  flex-shrink: 1;
 }
 
 .about-text {
-  flex-grow: 1;
+  margin-left: 2rem;
 }
 
 .dl-resume, .navigate-home {
@@ -366,6 +366,10 @@ footer ul li img {
   .profile-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .about-text {
+    margin-left: auto;
   }
 
   .timeline-container {
