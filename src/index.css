@@ -203,6 +203,10 @@ input:checked + .slider:before {
 
 /*Timeline*/
 
+#about h2 { /*timeline heading*/
+  margin-top: 2rem; 
+}
+
 .timeline-container {
   width: 50%;
   margin: 2rem auto;
