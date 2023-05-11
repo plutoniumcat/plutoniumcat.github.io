@@ -45,12 +45,37 @@ export const aboutJp = [
 
 export const timeline = [
     {
+        "date": "March 2010",
+        "desc": "One year student exchange at Soka University, Tokyo, Japan"
+    },
+    {
         "date": "October 2011",
         "desc": "Graduated from Griffith University with a Bachelor of Arts in Japanese Language"
     },
     {
+        "date": "November 2011",
+        "desc": "Working holiday in Okinawa, Miyagi and Yamanashi prefectures, Japan"
+    },
+    {
+        "date": "December 2012",
+        "desc": "Began working as an English teacher in Japan"
+    },
+    {
+        "date": "March 2016",
+        "desc": "Joined AtoZ English, taking on a variety of roles including English instructor, translator, proofreader,\
+        educational content writer and online course developer"
+    },
+    {
+        "date": "March 2018",
+        "desc": "Continued to work as a Japanese to English translator both freelance and as a contractor"
+    },
+    {
         "date": "October 2022",
         "desc": "Began Full-stack Web Development bootcamp at Coder Academy"
+    },
+    {
+        "date": "January 2023",
+        "desc": "Began internship at Digital Connections Australia"
     },
     {
         "date": "July 2023",
