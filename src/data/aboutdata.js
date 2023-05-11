@@ -1,40 +1,46 @@
  export const aboutEn = [
-    "Welcome to my website! I am a full-stack web developer with a passion for technology and a \
-    background in Japanese to English translation. I develop web applications using the MERN stack, Python, Flask, and SQL.",
+    "Hello and welcome to my website! I am a full-stack developer working in the MERN stack \
+    and have also created projects using Python, Flask and PostgreSQL.",
 
-   "In addition to my technical abilities, I am fluent in Japanese and have worked \
-    as a professional translator in the past. This experience has given me a unique perspective \
-    on cross-cultural communication and has helped me to develop a keen attention to detail.",
+   "I have previously worked as a Japanese to English translator and switched to coding later \
+   in life, however, I feel that in both fields I enjoy the challenge of problem solving, creating\
+    and arranging parts to build a concise and accurate solution that fits the given constraints. \
+    I love digging deeper into something to build a more complete understanding of it, and the \
+    satisfaction of seeing something I’ve built come together into a complete whole. In fact, I \
+    feel that coding is a form of translation in that it requires developing a full understanding \
+    of someone’s intentions, and then expressing those thoughts in a completely different form \
+    (in this case, a language that computers can understand!)",
 
-    "My interests extend beyond technology and language, as I am also an avid fan of music, art, \
-    and video games. I am fascinated by different cultures and languages, and I enjoy exploring \
-    the nuances that make each one unique.",
+    "I am Australian, but lived in Japan for most of the time between 2010 and 2022. I can speak, \
+    read and write Japanese fluently and have passed N1 of the Japanese Language Proficiency Test \
+    (the highest level).",
 
-    "In my free time, I like to experiment with creating visual effects and animations using code. \
-    I find it incredibly rewarding to be able to bring a creative vision to life through programming.",
+    "When I am not coding, I enjoy language study, karaoke, creating digital paintings on my iPad,\
+     and video games. I particularly love games for their unique potential as a storytelling medium.",
 
-    "As a dedicated and passionate developer, I am always seeking new challenges and \
-    opportunities to learn and grow. I am excited to bring my skills and experiences to the \
-    table and collaborate with like-minded individuals and organizations. \
-    Thank you for visiting my website, and I look forward to connecting with you soon!"
+    "I am currently looking for new opportunities in tech! Please send me an email via the contact\
+     form below, or message me on LinkedIn."
 ]
 
 export const aboutJp = [
-    "私のウェブサイトへようこそ！私は、技術への情熱と日英翻訳のバックグラウンドを持つフルスタックのウェブ開発者です。\
-    MERNスタック、Python、Flask、SQLを使用してウェブアプリケーションを開発しています。",
+    "はじめまして、私のウェブサイトへようこそ！私はMERNスタックで働くフルスタックデベロッパーで、\
+    Python、Flask、PostgreSQLを使ったプロジェクトも作ってきています。",
 
-    "技術的な能力に加えて、私は日本語が流暢で、過去にプロの翻訳者として働いた経験があります。\
-    この経験により、異文化コミュニケーションに関するユニークな視点と、細部への鋭い注意を身につけることができました。",
+    "以前は日英翻訳者として働き、その後コーディングに転向しましたが、どちらの分野でも、\
+    与えられた制約に合った簡潔で正確なソリューションを構築するために部品を作り、\
+    配置する問題解決への挑戦を楽しんでいます。また、何かを深く掘り下げてより完全に理解することや、\
+    自分が作ったものが完成したときの満足感も好きです。実際、私はコーディングが翻訳の一種だと感じています。\
+    それは、人の意図を完全に理解した上で、それを全く別の形で表現する必要があるためです。\
+    （コーディングの場合は、コンピューターの理解できる言語で表現しなければなりません！）",
 
-    "私の興味はテクノロジーや言語にとどまらず、音楽、アート、ビデオゲームの熱烈なファンでもあります。\
-    異なる文化や言語に魅了され、それぞれをユニークにするニュアンスを探求するのが好きです。",
+    "私はオーストラリア人ですが、2010年から2022年までの大半の期間を日本で過ごしました。\
+    日本語は流暢に話し、読み、書くことができ、日本語能力試験のN1（最高レベル）にも合格しています。",
 
-    "自由時間には、コードを使って視覚効果やアニメーションを作る実験が好きです。プログラミングを通じて、\
-    クリエイティブなビジョンに命を吹き込むことができることに、大きなやりがいを感じています。",
+    "コーディング以外の時間は、語学、カラオケ、iPadでのデジタル絵画の制作、\
+    そしてビデオゲームを楽しんでいます。特にゲームならではの物語の可能性と表現力が大好きです。",
 
-    "熱心で情熱的な開発者として、私は常に新しい挑戦と学び、成長する機会を求めています。自分のスキルや経験を活かして、\
-    志を同じくする個人や組織とコラボレーションできることをとても嬉しく思っています。私のウェブサイトをご覧いただき、\
-    ありがとうございます！すぐにお会いできることを楽しみにしています！"
+    "現在、技術分野での新しい機会を探しております！下記のお問い合わせフォームからメールを送っていただくか、\
+    LinkedInでメッセージを送信してください。"
 ]
 
 export const timeline = [

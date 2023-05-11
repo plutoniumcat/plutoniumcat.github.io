@@ -1,5 +1,5 @@
 const detailedProjectData = {
-    "DailyExercise": {
+    "daily-exercise": {
         "title": "Daily Exercise",
         "stack": "python",
         "desc": ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, \

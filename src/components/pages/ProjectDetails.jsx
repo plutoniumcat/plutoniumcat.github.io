@@ -3,16 +3,14 @@ import detailedProjectData from '../../data/detailedprojectdata';
 import { useState, useEffect } from 'react';
 
 export default function ProjectDetails() {
-    
-    let { projectName } = useParams();
 
-    console.log({projectName});
+    let { projectName } = useParams();
 
     const [projectDetails, setProjectDetails] = useState(null);
 
     useEffect(() => {
         setProjectDetails({ detailedProjectData }[{ projectName }.projectName]);
-    }, [projectName, projectDetails]);
+    }, [projectName]);
 
     return(
         <div className="project-details">

@@ -16,7 +16,7 @@ root.render(
         <Route path="/projects" element={<Outlet />} />
         <Route path="/projects/" element={<Projects />} />
         <Route path="/projects/tagged/:tag" element={<Tagged />} />
-        <Route path="projects/:project" element={<ProjectDetails />} />
+        <Route path="projects/:projectName" element={<ProjectDetails />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
