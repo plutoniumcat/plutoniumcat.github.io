@@ -1,38 +1,55 @@
+import { useState } from 'react';
 import ENresume from '../data/amcpherson_resume.pdf';
 import JPresume from '../data/amcpherson_shokumu.pdf';
 import me2023 from '../media/me2023.jpg';
-import { aboutEn } from '../data/aboutdata';
-import { aboutJp } from '../data/aboutdata';
-import { timeline } from '../data/aboutdata';
+import { aboutEn, aboutJp, timelineEn, timelineJp } from '../data/aboutdata';
+import { useEffect } from 'react';
 
 function About(props) {
+    const [about, setAbout] = useState(aboutEn);
+    const [timeline, setTimeline] = useState(timelineEn);
+    const [resume, setResume] = useState(ENresume);
+    const [resumeButton, setResumeButton] = useState("Resume (PDF)")
+
+    useEffect(() => {
+        if (props.langIsToggled) {
+            setAbout(aboutJp);
+            setTimeline(timelineJp);
+            setResume(JPresume);
+            setResumeButton("職務経歴書（PDF)");
+        }
+        else {
+            setAbout(aboutEn);
+            setTimeline(timelineEn);
+            setResume(ENresume);
+            setResumeButton("Resume (PDF)")
+        }
+    }, [props.langIsToggled])
+
     return (
         <section id="about">
             <h1 className="aboutme">About Me</h1>
             <div className="profile-container">
                 <div className="profile-img-container">
-                    <img src={me2023} alt="Me" id="profileimage" />
+                    <img src={ me2023 } alt="Me" id="profileimage" />
                 </div>
                 <div className="about-text">
-                    { props.langIsToggled ? aboutJp.map((p) => (<p>{p}</p>)) : aboutEn.map((p) => (<p>{p}</p>))}
+                    { about.map((p) => (<p>{p}</p>)) }
                 </div>
             </div>
             <h2>Timeline</h2>
             <div className="timeline-container">
                 {
-                    timeline.map((event)=>(
-                        <div className="timeline-event" key={event.date}>
-                            <h3>{event.date}</h3>
-                            <p>{event.desc}</p>
-                        </div>
-                    ))
+                     timeline.map((event)=>(
+                         <div className="timeline-event" key={event.date}>
+                             <h3>{event.date}</h3>
+                             <p>{event.desc}</p>
+                         </div>
+                     ))
                 }
             </div>
             <div className="resume">
-                { props.langIsToggled ? 
-                    <a className="dl-resume" href={ JPresume }>職務経歴書 (PDF)</a> :
-                    <a className="dl-resume" href={ ENresume }>Resume (PDF)</a>
-                }
+                <a className="dl-resume" href={ resume }>{ resumeButton }</a>
             </div>
         </section>
     )

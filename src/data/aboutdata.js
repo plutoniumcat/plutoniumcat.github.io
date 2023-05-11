@@ -34,7 +34,7 @@ export const aboutJp = [
     （コーディングの場合は、コンピューターの理解できる言語で表現しなければなりません！）",
 
     "私はオーストラリア人ですが、2010年から2022年までの大半の期間を日本で過ごしました。\
-    日本語は流暢に話し、読み、書くことができ、日本語能力試験のN1（最高レベル）にも合格しています。",
+    日本語が堪能で、日本語能力試験のN1（最高レベル）にも合格しています。",
 
     "コーディング以外の時間は、語学、カラオケ、iPadでのデジタル絵画の制作、\
     そしてビデオゲームを楽しんでいます。特にゲームならではの物語の可能性と表現力が大好きです。",
@@ -43,7 +43,7 @@ export const aboutJp = [
     LinkedInでメッセージを送信してください。"
 ]
 
-export const timeline = [
+export const timelineEn = [
     {
         "date": "March 2010",
         "desc": "One year student exchange at Soka University, Tokyo, Japan"
@@ -80,5 +80,44 @@ export const timeline = [
     {
         "date": "July 2023",
         "desc": "End of Coder Academy bootcamp!"
+    }
+]
+
+export const timelineJp = [
+    {
+        "date": "2010年3月",
+        "desc": "東京の創価大学で一年間の留学"
+    },
+    {
+        "date": "2011年10月",
+        "desc": "グリフィス大学日本語学科卒業"
+    },
+    {
+        "date": "2011年11月",
+        "desc": "沖縄県、宮城県、山梨県でワーキングホリデー"
+    },
+    {
+        "date": "2012年12月",
+        "desc": "英語教師の仕事を始めました"
+    },
+    {
+        "date": "2016年3月",
+        "desc": "AtoZ Englishに入社し、英語講師、翻訳、校正、 教材制作、オンラインコース開発など様々な職務を担いました"
+    },
+    {
+        "date": "2018年3月",
+        "desc": "フリーランスと契約社員として翻訳仕事を続きました"
+    },
+    {
+        "date": "2022年10月",
+        "desc": "オーストラリアのCoder Academyに入学し、フルスタックウエブ開発ブートキャンプを始めました"
+    },
+    {
+        "date": "2023年1月",
+        "desc": "Digital Connections Australiaでインターンとして入社"
+    },
+    {
+        "date": "2023年6月",
+        "desc": "Coder Academy卒業見込み"
     }
 ]
