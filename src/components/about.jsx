@@ -10,7 +10,9 @@ function About(props) {
         <section id="about">
             <h1 className="aboutme">About Me</h1>
             <div className="profile-container">
-                <img src={me2023} alt="Me" id="profileimage" />
+                <div className="profile-img-container">
+                    <img src={me2023} alt="Me" id="profileimage" />
+                </div>
                 <div className="about-text">
                     { props.langIsToggled ? aboutJp.map((p) => (<p>{p}</p>)) : aboutEn.map((p) => (<p>{p}</p>))}
                 </div>

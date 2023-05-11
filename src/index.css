@@ -178,14 +178,20 @@ input:checked + .slider:before {
   flex-direction: row;
 }
 
+.profile-img-container {
+  width: 15%;
+  height: auto;
+}
+
 #profileimage {
-  width: 15rem;
+  width: auto;
   height: auto;
   border-radius: 50%;
 }
 
 .about-text {
   margin-left: 2rem;
+  width: 80%;
 }
 
 .dl-resume, .navigate-home {
@@ -368,8 +374,14 @@ footer ul li img {
     align-items: center;
   }
 
+  .profile-img-container {
+    width: 50%;
+  }
+
   .about-text {
     margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 
   .timeline-container {
