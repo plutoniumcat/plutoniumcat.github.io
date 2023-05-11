@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
-import detailedProjectData from '../../data/detailedprojectdata';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { detailedProjectData } from '../../data/detailedprojectdata';
 
 export default function ProjectDetails() {
 
@@ -8,8 +8,10 @@ export default function ProjectDetails() {
 
     const [projectDetails, setProjectDetails] = useState(null);
 
+    const getProjectDetails = name => detailedProjectData[name];
+
     useEffect(() => {
-        setProjectDetails({ detailedProjectData }[{ projectName }.projectName]);
+        setProjectDetails(getProjectDetails(projectName));
     }, [projectName]);
 
     return(
@@ -18,11 +20,11 @@ export default function ProjectDetails() {
                 <div>
                     <h1>{ projectDetails.title }</h1>
                     <h2>Stack: { projectDetails.stack }</h2>
-                    {projectDetails.desc.map(
-                        (para) => {
+                    { projectDetails.desc.map(
+                        (para) => (
                             <p>{ para }</p>
-                        }
-                    )}
+                        )
+                    ) }
                 </div>
                 :
                 <p>Project not found.</p>

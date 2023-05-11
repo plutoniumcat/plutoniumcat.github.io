@@ -1,4 +1,4 @@
-const detailedProjectData = {
+export const detailedProjectData = {
     "daily-exercise": {
         "title": "Daily Exercise",
         "stack": "python",
@@ -15,5 +15,8 @@ const detailedProjectData = {
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\
             nisi ut aliquip ex ea commodo consequat.'],
         "tags": ["python"]
+    },
+    "test": {
+        "title": "test"
     }
-}
+};

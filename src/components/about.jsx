@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ENresume from '../data/amcpherson_resume.pdf';
 import JPresume from '../data/amcpherson_shokumu.pdf';
 import me2023 from '../media/me2023.jpg';
 import { aboutEn, aboutJp, timelineEn, timelineJp } from '../data/aboutdata';
-import { useEffect } from 'react';
 
 function About(props) {
     const [about, setAbout] = useState(aboutEn);
