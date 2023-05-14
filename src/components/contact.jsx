@@ -1,3 +1,5 @@
+import Obfuscate from 'react-obfuscate';
+
 function Contact() {
     return (
         <section id="contact">
@@ -5,15 +7,14 @@ function Contact() {
             <p>
                 Contact me to discuss hiring or projects!
             </p>
-            <form action="submit" id="contact">
-                <label htmlFor="name">Name or Organization:</label>
-                <input type="text" name="name" id="name" />
-                <label htmlFor="email">Email:</label>
-                <input type="text" name="email" id="email" className="email" />
-                <label htmlFor="message">Message:</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <input className="submit-btn" type="submit" value="Submit" />
-            </form>
+            <Obfuscate email="alexandrialeemcpherson@gmail.com" aria-label="Email Me">
+                <svg className='email-btn' width={24} height={21}>
+                <path
+                fill="#000"
+                d="M12 12.713L.0 3h23.97L12 12.713zm0 2.574L0 5.562V21h24V5"
+                />
+                </svg>
+            </Obfuscate>
         </section>
     )
 }

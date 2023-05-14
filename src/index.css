@@ -356,6 +356,10 @@ form input, textarea {
   background-color: cornflowerblue;
 }
 
+.email-btn {
+  margin: 1rem;
+}
+
 /* Social */
 
 footer {
