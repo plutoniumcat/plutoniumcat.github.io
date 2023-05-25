@@ -91,7 +91,7 @@ nav ul li a {
   position: absolute;
   top: 25rem;
   left: 10rem;
-  text-shadow:0 0 2px white, 0 0 5px rgb(200, 235, 255), 0 0 10px rgb(128, 235, 255);
+  text-shadow:0 0 3px white, 0 0 6px rgb(200, 235, 255), 0 0 10px rgb(128, 235, 255);
 }
 
 /* About */
