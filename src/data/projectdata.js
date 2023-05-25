@@ -1,5 +1,6 @@
 const dailyexercise = require('../media/projects/dailyexercise.jpg');
 const learninglab = require('../media/projects/learninglab.jpg');
+const translator = require('../media/projects/translator.jpg');
 
 const projectdata = [
     {
@@ -20,6 +21,16 @@ const projectdata = [
         "github": "https://github.com/plutoniumcat/learninglab",
         "desc": "REST API for curating lists of tutorials.",
         "tags": ["python", "flask", "SQL", "API", "web"]
+    },
+
+    {
+        "id": 3,
+        "name": "Translator",
+        "stack": "JavaScript, React, Bootstrap, Tessaract.js",
+        "img": translator,
+        "github": "https://github.com/plutoniumcat/react-translation-app",
+        "desc": "Front-end for LibreTranslate API that accepts text file and image uploads",
+        "tags": ["JavaScript", "React", "Bootstrap", "web"]
     }
 ];
 
