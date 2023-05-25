@@ -6,6 +6,7 @@ import App from './App';
 import Projects from './components/projects';
 import { Tagged } from './components/pages/Tagged';
 import ProjectDetails from './components/pages/ProjectDetails';
+import Game from './components/Game';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
         <Route path="/projects/" element={<Projects />} />
         <Route path="/projects/tagged/:tag" element={<Tagged />} />
         <Route path="projects/:projectName" element={<ProjectDetails />} />
+        <Route path="game" element={<Game />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
