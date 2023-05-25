@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.55ae5cba.css",
-    "main.js": "/static/js/main.bbdb07e3.js",
+    "main.js": "/static/js/main.581518f5.js",
     "static/media/splashVideo.mp4": "/static/media/splashVideo.446f671636a2ffa2f3a0.mp4",
     "static/media/me2023.jpg": "/static/media/me2023.e5f9e525b8dfe7113d1c.jpg",
     "static/media/learninglab.jpg": "/static/media/learninglab.820a67103c6457905292.jpg",
@@ -10,10 +10,10 @@
     "static/media/amcpherson_resume.pdf": "/static/media/amcpherson_resume.9ceb1fc35e339d404a51.pdf",
     "index.html": "/index.html",
     "main.55ae5cba.css.map": "/static/css/main.55ae5cba.css.map",
-    "main.bbdb07e3.js.map": "/static/js/main.bbdb07e3.js.map"
+    "main.581518f5.js.map": "/static/js/main.581518f5.js.map"
   },
   "entrypoints": [
     "static/css/main.55ae5cba.css",
-    "static/js/main.bbdb07e3.js"
+    "static/js/main.581518f5.js"
   ]
 }
