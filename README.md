@@ -1,6 +1,6 @@
 # Portfolio Site
 
-The live version of this site can be found here: [plutoniumcat.github.io/](plutoniumcat.github.io/)
+The live version of this site can be found here: [www.plutoniumcat.com](www.plutoniumcat.com)
 
 This is my personal portfolio site developed in React. Here I hope to showcase my past projects and provide an easy source for my contact information as a developer.
 
